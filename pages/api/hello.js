@@ -1,5 +1,10 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-
+import fs from "fs";
+var data = fs.readFileSync("./pramodcv.pdf");
 export default function handler(req, res) {
-  res.status(200).json({ name: 'John Doe' })
+  // res.setHeader(
+  //   'Content-Disposition: attachment; filename="../assets/pramodcv.pdf"'
+  // );
+  res.contentType("application/pdf");
+  res.status(200).send(data);
 }

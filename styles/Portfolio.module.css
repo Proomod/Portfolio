@@ -1,0 +1,41 @@
+.container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container h1,
+.container p {
+  align-self: center;
+}
+
+.slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.content {
+  padding-top: 1rem;
+  text-align: center;
+}
+
+.portfolioImage {
+  width: clamp(120px, 50%, 250px);
+  height: auto;
+  object-fit: cover;
+  border-radius: 7px;
+}
+
+@media screen and (min-width: 1078px) {
+  .slide {
+    flex-direction: row;
+    align-items: center;
+    object-fit: cover;
+  }
+  .content {
+    padding-left: 1rem;
+  }
+}

@@ -1,0 +1,27 @@
+.contactInformation {
+  display: flex;
+
+  flex-direction: column;
+  justify-content: space-around;
+  width: 85%;
+  height: 45vh;
+
+  margin: 0 auto;
+}
+.contactHeader {
+  align-self: center;
+  text-align: center;
+}
+
+.contactNo,
+.emailInformation,
+.locationInfo {
+  color: var(--first-color-alt);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.innerContainer {
+  margin-left: 1rem;
+}

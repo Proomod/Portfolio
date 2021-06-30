@@ -1,0 +1,14 @@
+.button {
+  opacity: 80%;
+  outline: none;
+  padding: 0.85rem 1.4rem;
+  margin-top: 1rem;
+  background-color: var(--first-color-alt);
+  color: var(--body-color);
+  font-weight: 500;
+  font-size: var(--h2-font-size);
+  border-radius: 10px;
+  border: none;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}

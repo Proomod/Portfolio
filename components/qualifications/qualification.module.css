@@ -1,0 +1,55 @@
+.container {
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.qualificationHeader {
+  align-self: center;
+  line-height: 1.4;
+}
+
+.qualificationHeaderText {
+  font-size: var(--small-font-size);
+  text-align: center;
+}
+
+.qualificationSwitcher {
+  display: flex;
+  justify-content: center;
+}
+
+.qualifications {
+  height: 100px;
+  color: black;
+  width: 100%;
+
+  position: relative;
+  z-index: -1;
+}
+
+.qualificationEducation,
+.qualificationWork {
+  transition: all 0.2s cubic-bezier(0.4, 0, 1, 1);
+  width: 100%;
+  position: absolute;
+}
+
+.educationSwitchButton,
+.workSwitchButton {
+  border: none;
+  display: flex;
+  padding: 1rem 0.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  background-color: transparent;
+}
+
+.verticalDate {
+  padding: 0;
+}
+
+/* CUSTOM LINE COLOR */
+/* The line */
