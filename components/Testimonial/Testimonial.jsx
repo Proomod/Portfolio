@@ -29,7 +29,17 @@ export default function Testimonial() {
     <div className={styles.slider} key={index}>
       <div className={styles.clientDetails}>
         <div className={styles.avatar}>
-          <Image src="./test1.jpg" alt="" />
+          <Image
+            className={styles.avatarImage}
+            src="/test1.jpg"
+            style={{ borderRadius: "50%" }}
+            width={300}
+            height={300}
+            unoptimized
+            // layout="fill"
+            objectFit="cover"
+            alt="profile"
+          />
         </div>
         <div className={styles.nameOccupation}>
           <h3>{data.name}</h3>

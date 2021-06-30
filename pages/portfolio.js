@@ -3,6 +3,8 @@ import Slider from "../components/slider/slider";
 import Button from "../components/button/button";
 import Testimonial from "../components/Testimonial/Testimonial";
 import Image from "next/image";
+import computer from "../public/portfolioimg1.jpg";
+import placeholder from "../public/test1.jpg";
 import { Fragment } from "react";
 
 export default function Portfolio() {
@@ -10,7 +12,10 @@ export default function Portfolio() {
     <div className={styles.slide} key={1}>
       <Image
         className={styles.portfolioImage}
-        src="./portfolioimg1.jpg"
+        src={computer}
+        width={300}
+        placeholder="blur"
+        height={200}
         alt="human"
       />
 
@@ -21,7 +26,14 @@ export default function Portfolio() {
       </div>
     </div>,
     <div className={styles.slide} key={2}>
-      <Image className={styles.portfolioImage} src="./pp.png" alt="computer" />
+      <Image
+        className={styles.portfolioImage}
+        width={300}
+        height={200}
+        placeholder="blur"
+        src={placeholder}
+        alt="computer"
+      />
 
       <div className={styles.content}>
         <h2>Modern Website</h2>

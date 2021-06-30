@@ -15,19 +15,19 @@
 }
 
 .avatar {
-  background-color: blue;
-  border-radius: 50%;
-  width: 20%;
-  max-width: 50px;
+  width: 15%;
+  max-width: 55px;
   overflow: auto;
   margin-right: 0.5rem;
 }
-.avatar img {
+.avatarImage {
+  border-radius: 50%;
+}
+/* .avatar img {
   width: 100%;
   height: auto;
   object-fit: contain;
-  margin-bottom: -6px;
-}
+} */
 .nameOccupation {
   display: flex;
   flex-direction: column;
