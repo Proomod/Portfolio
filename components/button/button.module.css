@@ -1,5 +1,6 @@
 .button {
   opacity: 80%;
+cursor: pointer;
   outline: none;
   padding: 0.85rem 1.4rem;
   margin-top: 1rem;

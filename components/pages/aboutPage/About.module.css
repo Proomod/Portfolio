@@ -1,0 +1,59 @@
+.container {
+  width: 90%;
+  margin: auto auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.worksDone {
+  display: flex;
+  justify-content: space-around;
+}
+.experience {
+  text-align: center;
+}
+
+.experienceDescription {
+  font-size: var(--small-font-size);
+  /* text-align: center; */
+}
+
+
+@media screen and (min-width:992px){
+  .container{
+    grid-template-columns:repeat(4,1fr);
+    display:grid;
+    grid-template-areas:
+    "a a a a"
+    "b b c c "
+    "b b e e "
+    ". . f ."
+  }
+  .aboutHeader{
+    grid-area:a;
+    justify-self: center;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .myImage{
+   grid-area:b;
+  }
+  .description{
+    grid-area:c;
+  }
+  .worksDone{
+    grid-area:e;
+  }
+  .download{
+    grid-area:f;
+  }
+
+
+
+}

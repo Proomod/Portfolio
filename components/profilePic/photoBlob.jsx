@@ -1,4 +1,4 @@
-import styles from "./navigation/navigation.module.css";
+import styles from './picture.module.css'
 function ImageBlob(props) {
   return (
     <svg

@@ -39,7 +39,7 @@ function Navigations(props) {
     },
     {
       name: "About",
-      link: "/about",
+      link: "#about",
       icon: <Unicons.UilUser />,
     },
     {

@@ -97,6 +97,7 @@ textarea {
   flex-direction: column;
 }
 
+
 /* Icon container's border */
 /* .vertical-timeline.vertical-timeline-custom-line
   .vertical-timeline-element--work
@@ -121,3 +122,19 @@ textarea {
   color: black;
   font-weight: 500;
 } */
+@media (min-width: 1080px) {
+  :root{
+    --big-font-size: 2.5rem;
+    --h1-font-size: 2rem;
+    --h2-font-size: 1.35rem;
+    --h3-font-size: 1.2rem;
+    --normal-font-size: 1.2rem;
+    --small-font-size: 0.9rem;
+    --smaller-font-size: 0.84rem;
+  }
+  header,.main{
+    width:80%;
+    margin: 0 auto;
+  }
+  
+}

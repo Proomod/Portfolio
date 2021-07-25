@@ -1,0 +1,20 @@
+
+.profilePic {
+    fill: var(--first-color);
+    height: 80%;
+    width: 80%;
+    align-self: center;
+    grid-area: b;
+  }
+
+  @media screen and (min-width: 990px) {
+
+   .profilePic{
+       height:80%;
+       width:80%;
+       justify-self: start;
+       grid-area: c;
+   }
+   
+      
+  }
