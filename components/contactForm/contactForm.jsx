@@ -7,7 +7,8 @@ export default function ContactForm(props) {
     console.log("you are a pussycat");
   }
   return (
-    <form action="" className={styles.contactForm} onSubmit={handleSubmit}>
+   <div className={styles.formWrapper}>
+      <form action="" className={`${styles.contactForm} props.classname`} onSubmit={handleSubmit}>
       <input type="text" className={styles.contactName} placeholder="name" />
       <input type="text" className={styles.contactEmail} placeholder="email" />
       <textarea
@@ -16,9 +17,10 @@ export default function ContactForm(props) {
         placeholder="message"
         rows={5}
       />
-      <Button type="submit" className={styles.sendMessageButton}>
+      <Button type="submit" classname={styles.sendMessageButton}>
         Send Message
       </Button>
     </form>
+   </div>
   );
 }

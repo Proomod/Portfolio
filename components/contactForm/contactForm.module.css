@@ -1,3 +1,4 @@
+
 .contactForm {
   display: flex;
   justify-content: center;
@@ -25,4 +26,13 @@
 }
 .sendMessageButton {
   align-self: start;
+}
+@media screen and (min-width:990px){
+  .formWrapper{
+    width: 100%;
+  }
+  /* .contactForm{
+    justify-content:stretch;
+  } */
+ 
 }

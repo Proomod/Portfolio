@@ -1,10 +1,9 @@
 .contactInformation {
   display: flex;
-
   flex-direction: column;
   justify-content: space-around;
   width: 85%;
-  height: 45vh;
+  /* height: 45vh; */
 
   margin: 0 auto;
 }
@@ -24,4 +23,24 @@
 
 .innerContainer {
   margin-left: 1rem;
+}
+@media screen and (min-width: 990px) {
+  .contactInformation {
+    width: 100%;
+    min-height: 100vh;
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+    "a a"
+    "b c"
+    "b c"
+    ;
+  }
+  .contactHeader{
+    grid-area: a;
+  }
+  .contactInfo{
+    grid-area: b;
+  }
 }

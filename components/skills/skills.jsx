@@ -4,18 +4,9 @@ import Toggler from '../collapsible/collapsible';
 import skillsData from "./data";
 
 export default function Skills() {
-  // const [isOpen, setOpenStatus] = useState(false);
- 
-
-
-  // function clickHandler() {
-  //   setOpenStatus(!isOpen);
-  // }
-  console.log(skillsData()[0]);
-
-  return (
+   return (
     <div className={styles.container}>
-      <h2 className={styles.skillsHeader}>Skills</h2>
+      <h1 className={styles.skillsHeader}>Skills</h1>
       <p>My current skills level</p>
 <div className={styles.skillsContainer}>
   {

@@ -33,7 +33,9 @@ export default function Service({ data }) {
       <div className={styles.service}>
         {data.icon}
         <h3 style={{ textAlign: "center" }}>{data.name}</h3>
-        <button onClick={() => toggleState(!showModal)}>View More</button>
+        <button className={styles.serviceButton} onClick={() => toggleState(!showModal)}>
+          <a>View More</a>
+        </button>
         {showModal ? (
           <Modal key={data.name} refs={node}>
             <h2>{data.name}</h2>

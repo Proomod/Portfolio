@@ -48,6 +48,16 @@ export default function Portfolio() {
       <div className={styles.container}>
         <h1>Portfolio</h1>
         <p>Some recent works</p>
+        <div>
+        </div>
+        <style jsx>
+         {
+           `div{
+             margin-bottom:6rem;
+           }
+           `
+         }
+        </style>
         <Slider slideData={sliderComponent} />
       </div>
       <Testimonial></Testimonial>

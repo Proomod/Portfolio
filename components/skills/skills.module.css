@@ -1,12 +1,17 @@
 .container {
   width: 85%;
-  margin: 0 auto;
+  margin: auto auto;
   display: flex;
+  min-height: 40vh;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
+.container p {
+  font-size: var(--small-font-size);
+}
 .skillsContainer{
+  margin-top: 6rem;
   display: flex;
  width: 100%;
   flex-direction: column;

@@ -2,9 +2,13 @@
   width: 90%;
   margin: 0 auto;
   display: flex;
+  min-height: 50vh;
   align-items: center;
   flex-direction: column;
+  margin-top:8rem;
+  margin-bottom:10rem;
 }
+
 
 .container h1,
 .container p {
@@ -29,7 +33,7 @@
   border-radius: 7px;
 }
 
-@media screen and (min-width: 1078px) {
+@media screen and (min-width: 990px) {
   .slide {
     flex-direction: row;
     align-items: center;

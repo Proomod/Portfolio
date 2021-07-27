@@ -3,12 +3,16 @@
   width: 90%;
   margin: 0 auto;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 /* .slider {
   padding: 1rem;
 } */
-
+.slider{
+  width: 70%;
+  margin: 0 auto;
+}
 .clientDetails {
   display: flex;
   align-items: center;
@@ -31,4 +35,11 @@
 .nameOccupation {
   display: flex;
   flex-direction: column;
+}
+
+@media screen and (min-width:992px){
+  .slider{
+    width: 70%;
+   
+  }
 }

@@ -23,7 +23,6 @@ var heightOfPlaceholder= workTimeline.current.style.visibility === "hidden" ? ed
       placeholder.current.style.height =`calc(${heightOfPlaceholder}px + 15px)`}
     
   }, [qualification])
-  console.log(qualification);
 
   return (
     <div className={styles.container}>

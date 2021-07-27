@@ -1,16 +1,17 @@
 import ContactForm from "../../contactForm/contactForm";
 import styles from "./Contact.module.css";
 import * as Unicons from "@iconscout/react-unicons";
-import { Fragment } from "react";
+
 
 export default function Contact() {
   return (
-    <Fragment>
+
       <div className={styles.contactInformation}>
         <div className={styles.contactHeader}>
           <h1 className={styles.contactFormHeader}>Contact Me</h1>
           <p className={styles.contactSubHeader}>Get in touch</p>
         </div>
+        <div className={styles.contactInfo}>
         <div className={styles.contactNo}>
           <Unicons.UilPhoneAlt size={40.0} color={styles.contactNo.color} />
           <div className={styles.innerContainer}>
@@ -28,6 +29,7 @@ export default function Contact() {
           </div>
         </div>
         <div className={styles.locationInfo}>
+
           <Unicons.UilMapMarker size={40.0} color={styles.contactNo.color} />
 
           <div className={styles.innerContainer}>
@@ -35,8 +37,12 @@ export default function Contact() {
             <p className={styles.locationDetails}>Butwal,Nepal</p>
           </div>
         </div>
+
+        </div>
+        
+        <ContactForm classname={styles.contactForm} />
       </div>
-      <ContactForm />
-    </Fragment>
+      
+ 
   );
 }

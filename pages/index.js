@@ -47,12 +47,13 @@ function HomePage() {
         <SkillsPage/>
         
       </div>
+    
+      <div id="services">
+        <MyServices/>
+      </div>
       <div className="" id="portfolio">
         <Portfolio/>
           
-      </div>
-      <div id="services">
-        <MyServices/>
       </div>
       <div id="contact">
         <Contact/>

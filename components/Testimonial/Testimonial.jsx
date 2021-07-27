@@ -1,8 +1,22 @@
 import styles from "./testimonial.module.css";
 import Slider from "../slider/slider";
+import {useState,useRef,useEffect} from  'react';
 import Image from "next/image";
 
 export default function Testimonial() {
+  const [width,getWidth]=useState(0);
+  useEffect(() => {
+    getWidth(window.innerWidth);
+    const handleResize= () => {
+      
+    }
+    window.addEventListener("resize",handleResize)
+
+    return () => {
+      window.removeEventListener("resize",handleResize);
+    }
+  }, [width])
+
   const clientTestimonials = [
     {
       name: "John miller",
@@ -51,13 +65,19 @@ export default function Testimonial() {
       </div>
     </div>
   ));
+  console.log(typeof width);
 
   return (
     <div className={styles.container}>
       <h1>Testimonial</h1>
       <p> My clients sayings</p>
 
-      <Slider slidesPerView={1} slideData={clientTestimonials}></Slider>
+      <Slider slidesPerView={(width>=990)?2:1} slideData={clientTestimonials}></Slider>
+      <style jsx>
+       { `p{
+          margin-bottom:6rem;
+        }`}
+      </style>
     </div>
   );
 }
