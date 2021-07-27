@@ -1,32 +1,27 @@
 import styles from "../styles/Home.module.css";
-import Link from "next/link";
 import AboutPage from '../components/pages/aboutPage/aboutPage';
-import * as Unicons from "@iconscout/react-unicons";
 import { Fragment } from "react";
 import Button from '../components/button/button';
 import ImageBlob from "../components/profilePic/photoBlob";
 import {useRouter} from 'next/router';
-import SkillsPage from "../components/pages/skillsPage/skills"
+import SkillsPage from "../components/pages/skillsPage/skills";
+import Portfolio from "../components/pages/portfolioPage/portfolio";
+import MyServices from "../components/pages/servicePage/services";
+import Contact from "../components/pages/contactPage/contact";
+import SocialLinks from '../components/socialLinks/socialLinks';
+
 function HomePage() {
   const router=useRouter();
 
   function gotoContact(){
-   router.push('/contact');
+   router.push('#contact');
   }
   return (
     <Fragment>
-      <div className={styles.container}>
+      <div className={styles.container} id="home">
         
           <div className={styles.socialLinks}>
-            <a href="" target="_blank" className="linkedIn">
-              <Unicons.UilLinkedin />
-            </a>
-            <a href="" className="linkedIn">
-              <Unicons.UilGithub />
-            </a>
-            <a href="" className="linkedIn">
-              <Unicons.UilFacebook />
-            </a>
+            <SocialLinks/>
           </div>
          
       
@@ -46,13 +41,22 @@ function HomePage() {
       </div>
 
       <div id="about" className={styles.about}>
-        {AboutPage()}
+        <AboutPage/>
       </div>
-      <div id="skill">
-        {SkillsPage()}
+      <div id="skills">
+        <SkillsPage/>
         
       </div>
-
+      <div className="" id="portfolio">
+        <Portfolio/>
+          
+      </div>
+      <div id="services">
+        <MyServices/>
+      </div>
+      <div id="contact">
+        <Contact/>
+      </div>
     </Fragment>
   );
 }

@@ -96,6 +96,11 @@ textarea {
   display: flex;
   flex-direction: column;
 }
+#footer{
+  color: var(--body-color);
+  border-radius: 10px;
+  width: 100%;
+}
 
 
 /* Icon container's border */

@@ -1,0 +1,50 @@
+
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+    flex-direction: row;
+    background-color:var(--first-color-alt);
+    justify-items: center;
+    border-radius:5px 5px 0 0;
+    height:300px;
+}
+.contact{
+ 
+    align-self:center;
+}
+
+.container *{
+    color: var(--body-color);
+
+}
+.information{
+    padding-top:50px;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+    height:70%;
+    width: 50%;
+}
+.links{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+
+.information p{
+    color: var(--body-color);
+}
+
+.socialLinks{
+    display:flex;
+    padding-top:50px;
+    width:30%;
+   
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+

@@ -7,18 +7,18 @@ function Navigations(props) {
   const [width, setWidth] = useState(0);
   const [isOpen, setToggler] = useState(false);
   useEffect(() => {
+    const handleResize = (e) => {
+      if (width >= 1000) {
+        setToggler(true);
+      }
+    };
     setWidth(window.innerWidth);
     window.addEventListener("resize", handleResize);
     return () => {
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
-  const handleResize = (e) => {
-    if (width >= 1000) {
-      setToggler(true);
-    }
-  };
-
+  }, [width]);
+  
   useEffect(() => {
     if (width >= 1000) {
       setToggler(true);
@@ -44,22 +44,22 @@ function Navigations(props) {
     },
     {
       name: "Skills",
-      link: "/skills",
+      link: "#skills",
       icon: <Unicons.UilBooks />,
     },
     {
       name: "Services",
-      link: "/services",
+      link: "#services",
       icon: <Unicons.UilBriefcase />,
     },
     {
       name: "portfolio",
-      link: "/portfolio",
+      link: "#portfolio",
       icon: <Unicons.UilScenery />,
     },
     {
       name: "Contact",
-      link: "/contact",
+      link: "#contact",
       icon: <Unicons.UilMessage />,
     },
   ];

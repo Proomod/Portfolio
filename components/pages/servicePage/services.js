@@ -1,7 +1,7 @@
-import styles from "../styles/Service.module.css";
+import styles from "./Service.module.css";
 import * as Unicons from "@iconscout/react-unicons";
 
-import Service from "../components/services/service";
+import Service from "../../services/service";
 
 export default function Services() {
   const myServices = [

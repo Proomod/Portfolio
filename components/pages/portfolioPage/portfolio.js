@@ -1,10 +1,10 @@
-import styles from "../styles/Portfolio.module.css";
-import Slider from "../components/slider/slider";
-import Button from "../components/button/button";
-import Testimonial from "../components/Testimonial/Testimonial";
+import styles from "./Portfolio.module.css";
+import Slider from "../../slider/slider";
+import Button from "../../button/button";
+import Testimonial from "../../Testimonial/Testimonial";
 import Image from "next/image";
-import computer from "../public/portfolioimg1.jpg";
-import placeholder from "../public/test1.jpg";
+import computer from "/public/portfolioimg1.jpg";
+import placeholder from "/public/test1.jpg";
 import { Fragment } from "react";
 
 export default function Portfolio() {
@@ -32,7 +32,7 @@ export default function Portfolio() {
         height={200}
         placeholder="blur"
         src={placeholder}
-        alt="computer"
+        alt="computer"  
       />
 
       <div className={styles.content}>

@@ -1,5 +1,5 @@
-import ContactForm from "../components/contactForm/contactForm";
-import styles from "../styles/Contact.module.css";
+import ContactForm from "../../contactForm/contactForm";
+import styles from "./Contact.module.css";
 import * as Unicons from "@iconscout/react-unicons";
 import { Fragment } from "react";
 

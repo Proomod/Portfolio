@@ -36,11 +36,7 @@
   border: none;
 }
 
-.profilePic {
-  fill: var(--first-color);
-  height: 80%;
-  width: 80%;
-}
+
 
 @media screen and (min-width: 1080px) {
   .navList {
@@ -63,7 +59,7 @@
   }
   .nav {
     flex: 1 1 auto;
-
+    
     /* margin-left: auto; */
   }
   

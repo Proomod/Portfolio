@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   margin-top: 2rem;
+ 
 }
 
 .qualificationHeader {
@@ -19,20 +20,22 @@
 .qualificationSwitcher {
   display: flex;
   justify-content: center;
+  position: relative;
 }
-
+ 
 .qualifications {
-  height: 100px;
+  height: calc(100% - 2rem);
+  /* height: 100px; */
   color: black;
   width: 100%;
 
   position: relative;
-  z-index: -1;
+
 }
 
 .qualificationEducation,
 .qualificationWork {
-  transition: all 0.2s cubic-bezier(0.4, 0, 1, 1);
+  transition: all 0.4s ease;
   width: 100%;
   position: absolute;
 }
@@ -49,6 +52,11 @@
 
 .verticalDate {
   padding: 0;
+}
+.placeholder {
+  visibility: hidden;
+position: relative;
+width: 100%;
 }
 
 /* CUSTOM LINE COLOR */

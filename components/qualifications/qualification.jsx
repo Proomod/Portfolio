@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useRef,useEffect } from "react";
 import { EducationData, WorkData } from "./educationandwork";
 import * as Unicons from "@iconscout/react-unicons";
 
@@ -11,6 +11,18 @@ import styles from "./qualification.module.css";
 
 export default function Qualifications() {
   const [qualification, setState] = useState("education");
+  const placeholder=useRef(null);
+  const workTimeline=useRef(null);
+  const educationTimeline=useRef(null);
+  useEffect(() => {
+    console.log(workTimeline.current.style.visibility);
+    
+var heightOfPlaceholder= workTimeline.current.style.visibility === "hidden" ? educationTimeline.current.getBoundingClientRect().height : workTimeline.current.getBoundingClientRect().height;
+
+    if(placeholder.current){
+      placeholder.current.style.height =`calc(${heightOfPlaceholder}px + 15px)`}
+    
+  }, [qualification])
   console.log(qualification);
 
   return (
@@ -46,7 +58,7 @@ export default function Qualifications() {
         </button>
       </div>
       <div className={styles.qualifications}>
-        <div
+        <div ref={educationTimeline} 
           className={styles.qualificationEducation}
           style={
             qualification === "education"
@@ -80,7 +92,7 @@ export default function Qualifications() {
             ))}
           </VerticalTimeline>
         </div>
-        <div
+        <div ref={workTimeline}
           className={styles.qualificationWork}
           style={
             qualification === "work"
@@ -113,6 +125,7 @@ export default function Qualifications() {
             ))}
           </VerticalTimeline>
         </div>
+        <div ref={placeholder} className={styles.placeholder}></div>
       </div>
     </div>
   );
