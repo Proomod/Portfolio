@@ -28,8 +28,6 @@ function Navigations(props) {
   function navToggleHandler() {
     setToggler(!isOpen);
   }
-  console.log(width);
-  console.log(isOpen);
 
   const navData = [
     {

@@ -1,6 +1,7 @@
 .nav {
   text-align: center;
   z-index: 100;
+  font-size:var(--normal-font-size);
 }
 
 .nav_child {
@@ -38,7 +39,7 @@
 
 
 
-@media screen and (min-width: 1080px) {
+@media screen and (min-width: 990px) {
   .navList {
  width:70%;
     border-radius: 0;

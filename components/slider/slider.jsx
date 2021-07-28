@@ -11,7 +11,7 @@ export default function Slider(props) {
       setCurrentSlide(s.details().relativeSlide);
     },
   });
-console.log(props.slidesPerView);
+
   return (
     <>
       <div className={styles.navigationWrapper}>

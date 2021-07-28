@@ -9,8 +9,30 @@ import Portfolio from "../components/pages/portfolioPage/portfolio";
 import MyServices from "../components/pages/servicePage/services";
 import Contact from "../components/pages/contactPage/contact";
 import SocialLinks from '../components/socialLinks/socialLinks';
+import * as fs from 'fs/promises';
+import path from 'path';
 
-function HomePage() {
+
+
+export async function getStaticProps(){
+  const directory=path.join(process.cwd(),'resume');
+  const files=await fs.readdir(directory);
+  console.log(files);
+  const file=await fs.readFile(path.join(directory,files[0]),'binary');
+return {
+  props:{
+    resume:await Promise.all([{
+      name:files[0],
+      content:file
+    }])
+  }
+
+}
+
+}
+
+
+function HomePage({resume}) {
   const router=useRouter();
 
   function gotoContact(){
@@ -40,8 +62,9 @@ function HomePage() {
       <ImageBlob />
       </div>
 
-      <div id="about" className={styles.about}>
-        <AboutPage/>
+      <div id="about" className={styles.about}
+      >
+        <AboutPage resumeFile={resume[0]}/>
       </div>
       <div id="skills">
         <SkillsPage/>

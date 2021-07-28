@@ -1,7 +1,6 @@
 import styles from "./button.module.css";
 
 export default function Button(props) {
-  console.log(props.onclick);
   return (
     <button
     onClick={props.onclick}

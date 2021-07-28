@@ -1,7 +1,18 @@
 import Button from "../../button/button";
 import styles from "./About.module.css";
 import Image from "next/image";
-export default function AboutPage() {
+export default function AboutPage({resumeFile}) {
+  async function pdfDownloadHandler(e){
+    const blobData=Buffer.from(resumeFile.content, 'binary');
+    const file= new Blob([blobData],{type:'application/pdf'})
+    const fileURL=URL.createObjectURL(file);
+    var a = document.createElement("a");
+    a.href = fileURL;
+    a.download = resumeFile.name;
+    a.click();
+
+
+  }
   const workExperience = [
     { content: "02+", description: "Years\nexperience" },
     { content: "10+", description: "Completed\nProjects" },
@@ -38,7 +49,9 @@ export default function AboutPage() {
           );
         })}
       </div>
-      <Button classname={styles.download} download>Download CV</Button>
+      <Button classname={styles.download} 
+      onclick={pdfDownloadHandler}
+       download>Download CV</Button>
     </div>
   );
 }

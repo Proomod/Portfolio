@@ -65,7 +65,6 @@ export default function Testimonial() {
       </div>
     </div>
   ));
-  console.log(typeof width);
 
   return (
     <div className={styles.container}>
