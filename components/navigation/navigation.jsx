@@ -7,6 +7,7 @@ function Navigation({ name, link, icon, keyName }) {
   useEffect(() => {
     getWidth(window.innerWidth);
     const handleResize= () => {
+      getWidth(window.innerWidth);
       
     }
     window.addEventListener("resize",handleResize)

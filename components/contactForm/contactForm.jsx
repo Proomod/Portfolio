@@ -1,17 +1,23 @@
 import styles from "./contactForm.module.css";
 import Button from "../button/button";
-import {useState} from 'react';
+import {useState,useEffect,useRef} from 'react';
 
 export default function ContactForm(props) {
   const [isValid,setValidity]=useState(false);
+  const [error,showError]=useState(false);
   const {value:nameValue,reset:nameReset,bind:nameBind}=useInput("");
   const {value:emailValue,reset:emailReset,bind:emailBind}=useInput("");
   const {value:messageValue,reset:messageReset,bind:messageBind}=useInput("");
+
+  // useEffect(() => {
+  //  showError(isValid?false:true);
+  // }, [isValid])
+
   function handleSubmit(event) {
   event.preventDefault();
-  //check for validation
   validator();
  if(isValid){
+   showError(false);
    fetch(`/api/sendMail`,{ 
      method: "POST",
     headers: {
@@ -37,7 +43,8 @@ export default function ContactForm(props) {
  });
 
 
-}
+  }
+  showError(true)
    }
   
    const validator=()=>{
@@ -67,7 +74,7 @@ export default function ContactForm(props) {
       <Button type="submit" classname={styles.sendMessageButton}>
         Send Message
       </Button>
-      {!isValid? <Message/> :null}
+      {error? <Message/> :null}
     </form>
     
    </div>

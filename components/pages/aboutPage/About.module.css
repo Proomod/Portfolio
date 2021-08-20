@@ -1,16 +1,23 @@
 .container {
-  width: 90%;
+  width: 70%;
   margin: auto auto;
   display: flex;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
 }
-
+.aboutMe,.description,.experienceContent{
+  color: #fff;
+  
+}
 
 
 .worksDone {
   display: flex;
+
   justify-content: space-around;
 }
 .experience {
@@ -21,7 +28,14 @@
   font-size: var(--small-font-size);
   /* text-align: center; */
 }
-
+.myImage{
+  grid-area:b;
+  border-radius: 50%;
+ }
+.downloadButton{
+  background-color: #FAE023;
+  color: rgb(12, 54, 109);
+}
 
 @media screen and (min-width:992px){
   .container{
@@ -40,16 +54,14 @@
     flex-direction: column;
     align-items: center;
   }
-  .myImage{
-   grid-area:b;
-  }
+  
   .description{
     grid-area:c;
   }
   .worksDone{
     grid-area:e;
   }
-  .download{
+  .downloadButton{
     grid-area:f;
   }
 

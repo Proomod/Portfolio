@@ -3,11 +3,11 @@
 .container{
     display: grid;
     grid-template-columns: repeat(3, minmax(100px, 1fr));
-    flex-direction: row;
     background-color:var(--first-color-alt);
     justify-items: center;
     border-radius:5px 5px 0 0;
-    height:300px;
+    min-height:300px;
+    height:20vh;
 }
 .contact{
  
@@ -24,27 +24,55 @@
     flex-direction:column;
     justify-content: space-between;
     height:70%;
-    width: 50%;
 }
 .links{
+   
+
+min-width: 100%;
     display:flex;
-    flex-direction: row;
+    flex-direction:column;
+    
     justify-content: space-between;
+}
+.links a{
+    padding-top:1rem;
 }
 
 
 
 .information p{
+    margin-top: 2rem;
     color: var(--body-color);
 }
 
 .socialLinks{
     display:flex;
     padding-top:50px;
-    width:30%;
-   
+    width:60%;
     flex-direction: row;
     justify-content: space-between;
 }
+
+
+@media screen and (min-width: 999px){
+
+    .links{
+        flex-direction: row;
+        padding-top:0;
+        
+    }
+    .links a{
+        padding-left: 1rem;
+    }
+
+    .socialLinks{
+        width:30%;
+    }
+
+
+
+}
+    
+
 
 

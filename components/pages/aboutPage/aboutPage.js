@@ -25,31 +25,32 @@ export default function AboutPage({resumeFile}) {
        <h1 className={styles.aboutMe}>About Me</h1>
         <p className={styles.introduction}>My details</p>
       </div>
-     <div className={styles.myImage}>
+   
      <Image
-      styles="grid-area:b"
-        src="/pp.png"
-        
+        src="/aboutme.jpg"
+        className={styles.myImage}
         alt="image goes here"
-        height="300px"
-        width="300px"
+        height="350px"
+        width="350px"
       />
-     </div>
-      <p className={styles.description}>
-        Magna anim proident culpa adipisicing dolore commodo dolor eu ad aute
-        nisi. Pariatur velit consequat dolor irure aute ullamco duis dolore
+       <p className={styles.description}>
+        I am a Electronics and communications engineer, currently working as an 
+        freelancer for different companies. I have a stronger interest in machine learning and
+        deep learning. I am currently working on a project to build a chatbot for a
+        social network.And I love playing around with code and keep tinkering around in my 
+        free time.
       </p>
       <div className={styles.worksDone}>
         {workExperience.map((data, index) => {
           return (
             <div key={index} className={styles.experience}>
-              <h2 className={styles.experieceContent}>{data.content}</h2>
+              <h2 className={styles.experienceContent}>{data.content}</h2>
               <p className={styles.experienceDescription}>{data.description}</p>
             </div>
           );
         })}
       </div>
-      <Button classname={styles.download} 
+      <Button classname={styles.downloadButton} 
       onclick={pdfDownloadHandler}
        download>Download CV</Button>
     </div>

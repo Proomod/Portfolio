@@ -27,24 +27,32 @@ async function sendMail(req,res,fn){
   }
 
 
-  return transporter.sendMail(mailOptions)
-  .then(()=>{
-    return res.send("mail sent");
+  return new Promise((resolve,reject)=>{
+  transporter.sendMail(mailOptions)
+  .then((res)=>{
+    resolve(res)
   })
   .catch((err)=>{
-   return res.send(err);
+   reject(err)
   });
-
+  })
 }
 
 
 
 export default async function handler(req,res){
  if (req.method === "POST"){
-  await sendMail(req,res);
+    try{
+      await sendMail(req,res);
+      return res.send("your message is delivered");
+    }
+    catch(err){
+      console.log(err);
+      return res.status(500).send(err);
+    }
 }
  else{
-   res.send("We don't do that here");
+   return res.status(403).send("We don't do that here");
   
  }
 };

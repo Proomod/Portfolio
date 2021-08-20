@@ -48,7 +48,7 @@ export default function Services() {
   ];
 
   return (
-    <div className="container">
+    <div className={styles.container}>
       <h1 className={styles.serviceHeader}>Services</h1>
       <p className={styles.serviceSubHeader}>What I offer</p>
 

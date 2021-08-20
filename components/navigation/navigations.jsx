@@ -87,9 +87,14 @@ function Navigations(props) {
       >
         {navItems}
       </ul>
+      <div>
+        <div className={styles.nameHolder}>
+          <h3>Pramod</h3>
+        </div>
       <button onClick={navToggleHandler} className={styles.nav_toggler}>
         {isOpen ? nav_toggle_items[0] : nav_toggle_items[1]}
       </button>
+      </div>
     </Fragment>
   );
 }

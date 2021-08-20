@@ -21,7 +21,7 @@ export default function Portfolio() {
 
       <div className={styles.content}>
         <h2>Modern Website</h2>
-        <p>lorem ipsum dolor sit amet, consectetur</p>
+        <p>I can build modern responsive websites using latest technology</p>
         <Button>Demo</Button>
       </div>
     </div>,
@@ -36,8 +36,8 @@ export default function Portfolio() {
       />
 
       <div className={styles.content}>
-        <h2>Modern Website</h2>
-        <p>lorem ipsum dolor sit amet, consectetur</p>
+        <h2>Mobile Application</h2>
+        <p>I can beautiful mobile apps with complex <br/> UI and animation along with native features and experience. </p>
         <Button>Demo</Button>
       </div>
     </div>,
@@ -60,7 +60,7 @@ export default function Portfolio() {
         </style>
         <Slider slideData={sliderComponent} />
       </div>
-      <Testimonial></Testimonial>
+      {/* <Testimonial></Testimonial> */}
     </Fragment>
   );
 }

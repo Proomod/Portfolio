@@ -25,7 +25,7 @@ const Footer=()=>{
                     <a>Portfolio</a>
                 </Link>
                 </div>
-                <p>Catch me if you can</p>
+                <p>Technical Expert for all your needs</p>
             </div>
             <div className={styles.socialLinks}>
                <SocialLinks/>
