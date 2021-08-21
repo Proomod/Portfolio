@@ -9,7 +9,7 @@ export default function Layout({ children }) {
         <title>{`Pramod's Portfolio`}</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta charset="utf" />
-        <meta name="description" content="Pramod bhusal portfolio website. Engineering graduate from tribhuwan university Nepal"/>
+        <meta name="description" content="Pramod bhusal portfolio website. Engineering graduate from Tribhuwan university Nepal"/>
         <meta  name="keywords" content="Pramod , bhusal, portfolio, engineer, developer"/>
         <meta name="author" content="Pramod bhusal"/>
       </Head>

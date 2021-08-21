@@ -21,7 +21,7 @@
   transition: transform 0.2s;
 }
 .navList,
-.nameHolder,.nav_toggler {
+.nameHolder{
   bottom: 0;
   z-index: 200;
   position: fixed;
@@ -30,9 +30,11 @@
   position: fixed;
   bottom: 0;
   left: 0;
-  max-height:50px;
+  display: flex;
+  justify-content: space-between;
+  /* max-height:50px; */
   width: 100%;
-  z-index: 199;
+  z-index: 201;
   background-color: rgb(242, 242, 242);
 }
 .nameHolder h3{
@@ -40,7 +42,7 @@
   color:#242329;
 }
 .nav_toggler {
-  right: 0;
+  /* right: 0; */
   padding-right: 1rem;
   border: none;
 }
