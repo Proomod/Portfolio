@@ -71,22 +71,25 @@ function HomePage({resume}) {
         </div>
       <ImageBlob />
       </div>
-      <div className={styles.waveTop}>
-        
-      </div>
+      
       {/* <div>
       <WaveTop/>
       </div> */}
     </div>
-    <div id="about" className={styles.about}
+    <div id="about" className={styles.waveTop}>
+        
+        </div>
+    
+    <div  className={styles.about}
     >
+      
       <AboutPage resumeFile={resume[0]}/>
      
     </div>
-      <div className={styles.wave}>
-        <p></p>
-      </div>
+      
       <div id="skills">
+      <div className={styles.wave}>
+      </div>
         <SkillsPage/>
         
       </div>
@@ -95,11 +98,10 @@ function HomePage({resume}) {
       <div id="services" className={styles.services}>
         <MyServices/>
       </div>
+      <div className="" id="portfolio">
       <div className={styles.servicesWave}>
 
-    </div>
-     
-      <div className="" id="portfolio">
+</div>
         <Portfolio/>
           
       </div>
