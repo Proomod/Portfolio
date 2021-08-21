@@ -1,7 +1,7 @@
-.navList {
+/* .navList {
   color: var(--title-color);
   bottom: 0;
-  position: relative;
+  position: absolute;
   padding: 1.5rem;
   width: 100%;
   z-index: 100;
@@ -32,4 +32,4 @@
 
     padding: 0;
   }
-}
+} */

@@ -55,7 +55,8 @@ height:35vh;
 }
 .servicesWaveTop{
   background-image:url("./services-wave-top.svg");
-  height:30vh;
+  height:20vh;
+  min-height:250px;
   
 }
 .servicesWave{

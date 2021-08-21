@@ -6,11 +6,13 @@ import styles from "./navigation.module.css";
 function Navigations(props) {
   const [width, setWidth] = useState(0);
   const [isOpen, setToggler] = useState(false);
+  const [isScrolled,setScrollToggler]=useState(false);
   useEffect(() => {
+    if (width >= 990) {
+      setToggler(true);
+    }
     const handleResize = (e) => {
-      if (width >= 1000) {
-        setToggler(true);
-      }
+      setWidth(window.innerWidth);
     };
     setWidth(window.innerWidth);
     window.addEventListener("resize", handleResize);
@@ -20,10 +22,19 @@ function Navigations(props) {
   }, [width]);
   
   useEffect(() => {
-    if (width >= 1000) {
-      setToggler(true);
+    
+   function handleScroll(e){
+    console.log(window.scrollY);
+    (window.scrollY > 0 && width >=990) ? setScrollToggler(true):setScrollToggler(false);
+   
+   }
+      window.addEventListener("scroll", handleScroll);
+  
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
     }
-  }, [width]);
+   
+  },[isOpen,width]);
 
   function navToggleHandler() {
     setToggler(!isOpen);
@@ -32,7 +43,7 @@ function Navigations(props) {
   const navData = [
     {
       name: "Home",
-      link: "/",
+      link: "#",
       icon: <Unicons.UilHome />,
     },
     {
@@ -79,7 +90,8 @@ function Navigations(props) {
 
   return (
     <Fragment>
-      <ul
+       <div className={`${styles.navWrapper} ${isScrolled?styles.stickyNav:null}`}>
+     <ul
         className={styles.navList}
         style={{
           transform: isOpen ? "translateY(0)" : "translateY(35vh)",
@@ -87,6 +99,7 @@ function Navigations(props) {
       >
         {navItems}
       </ul>
+     </div>
       <div>
         <div className={styles.nameHolder}>
           <h3>Pramod</h3>

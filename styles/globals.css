@@ -17,6 +17,7 @@
   --big-font-size: 2rem;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
+  --h23-font-size: 1.2rem;
   --h3-font-size: 1.12rem;
   --normal-font-size: 1rem;
   --small-font-size: 0.8rem;
@@ -66,6 +67,13 @@ h1,
 h2,
 h3 {
   color: var(--title-color);
+}
+/* :target :active{
+
+} */
+h1, h2, h3, h4, h5, h6 {
+  /* margin-top: -5rem; */
+  margin-top: 4rem;
 }
 
 p {
@@ -132,6 +140,7 @@ textarea {
     --big-font-size: 2.5rem;
     --h1-font-size: 2rem;
     --h2-font-size: 1.35rem;
+    --h23-font-size: 1.28rem;
     --h3-font-size: 1.2rem;
     --normal-font-size: 1.2rem;
     --small-font-size: 0.9rem;

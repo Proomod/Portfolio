@@ -1,4 +1,8 @@
 
+.navWrapper{
+  background-color: var(--body-color);
+
+}
 .navList {
   color: var(--title-color);
   background-color: var(--body-color);
@@ -53,28 +57,43 @@
   font-size:var(--normal-font-size);
   background-color:#fafafa;
 }
+.active{
+  color:brown;
+}
 
 
 
 @media screen and (min-width: 990px) {
+
+  .navWrapper{
+    width: 100vw;
+    min-height:60px;
+    height: 5vh;
+    position: fixed;
+    top: 0;
+    z-index: 200;
+    /* background-color: var(--body-color); */
+    right: 0;
+  }
+ 
   .navList {
  width:70%;
     border-radius: 0;
-    
+    height: 5vh;
+    min-height: 60px;
     box-shadow: none;
-
-    position: static;
-    margin-top: 1.5rem;
+    background-color:var(--body-color);
+    position: fixed;
+    top: 0;
+    right: 0;
     display: flex;
-    height: auto;
     flex-direction: row;
-
     justify-content: flex-end;
-
+    align-items: center;
     margin-left: auto;
-
     padding: 0;
   }
+ 
   .nav {
     flex: 1 1 auto;
     
@@ -85,4 +104,21 @@
   .nav_toggler ,.nameHolder{
     visibility: hidden;
   }
+  .stickyNav,.stickyNav ul {
+    
+    color:white;
+    background-color: var(--first-color-alt);
+    transition: all 0.3s;
+  }
+  .stickyNav .active {
+    color: var(--first-color);
+
+  }
+  .stickyNav li{
+    font-size:var(--h23-font-size);
+    background-color: var(--first-color-alt);
+    transition: all 0.3s;
+
+  }
+ 
 }

@@ -1,4 +1,5 @@
 import styles from "../styles/Home.module.css";
+import {useEffect} from "react";
 import AboutPage from '../components/pages/aboutPage/aboutPage';
 import { Fragment } from "react";
 import Button from '../components/button/button';
@@ -7,7 +8,6 @@ import {useRouter} from 'next/router';
 import SkillsPage from "../components/pages/skillsPage/skills";
 import Portfolio from "../components/pages/portfolioPage/portfolio";
 import MyServices from "../components/pages/servicePage/services";
-import WaveTop from '../components/svgs/wave-top';
 import Contact from "../components/pages/contactPage/contact";
 import SocialLinks from '../components/socialLinks/socialLinks';
 import * as fs from 'fs/promises';
@@ -35,6 +35,15 @@ return {
 
 function HomePage({resume}) {
   const router=useRouter();
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      console.log(router);
+      
+    })
+    return () => {
+    }
+  }, )
 
   function gotoContact(){
    router.push('#contact');
@@ -88,7 +97,7 @@ function HomePage({resume}) {
       </div>
       <div className={styles.servicesWave}>
 
-</div>
+    </div>
      
       <div className="" id="portfolio">
         <Portfolio/>

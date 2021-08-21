@@ -1,8 +1,13 @@
 import Link from "next/link";
 import styles from "./navigation.module.css";
 import {useState,useEffect} from  'react';
+import { useRouter } from 'next/router';
+
 
 function Navigation({ name, link, icon, keyName }) {
+  const router = useRouter();
+
+  
   const [width,getWidth]=useState(0);
   useEffect(() => {
     getWidth(window.innerWidth);
@@ -19,7 +24,9 @@ function Navigation({ name, link, icon, keyName }) {
   return (
     <li className={styles.nav} key={keyName}>
       <Link href={link}>
-        <a className={styles.nav_child}>
+        <a className={` ${router.asPath===`/${link}`?
+        `${styles.nav_child} ${styles.active}`:
+        styles.nav_child}`} >
           {width<=990?icon:null}
           {name}
         </a>
